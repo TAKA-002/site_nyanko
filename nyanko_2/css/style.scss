@@ -28,7 +28,7 @@ header {
   position: relative;
   width: 100%;
   z-index: 1;
-  
+
   &.NHK_nav {
     position: fixed;
     z-index: 5;
@@ -202,24 +202,24 @@ main {
     color: $cBrawn;
     margin: 0 0 28px 0;
   }
-  
+
   & .sec_image {
     width: 640px;
     height: 360px;
     vertical-align: bottom;
   }
-  
+
   & .sec_detail {
     margin-top: 32px;
     padding: 0 120px;
-    
+
     & .header3 {
       font-size: $PfontSize * 1.5;
       font-weight: normal;
       text-align: left;
       margin: 0;
     }
-    
+
     & p {
       text-align: left;
       margin: 15px 0 0 0;
@@ -232,7 +232,7 @@ main {
   & .member_info_area {
     display: flex;
     justify-content: space-between;
-    
+
     & .member_info_layout {
       display: flex;
       justify-content: space-between;
@@ -240,28 +240,28 @@ main {
       width: 468px;
       height: 246px;
       box-sizing: border-box;
-      
+
       & img {
         width: 180px;
         height: 180px;
         vertical-align: bottom;
       }
-      
+
       & .keeper_info {
         width: 208px;
-        
+
         & .header3 {
           font-size: $PfontSize * 1.5;
           font-weight: normal;
           text-align: left;
           margin: 17px 0 0 0;
           letter-spacing: 1px;
-          
+
           & span {
             font-size: 18px;
           }
         }
-        
+
         & p {
           margin: 20px 0 28px 0;
           letter-spacing: 1px;
@@ -280,17 +280,17 @@ main {
   color: $cWhite;
   padding: 0;
   cursor: pointer;
-  
+
   &:hover {
     opacity: 0.8;
   }
-  
+
   & .icon {
     position: relative;
     display: inline-block;
     width: 20px;
     height: 12px;
-    
+
     & span {
       position: absolute;
       background-color: $cWhite;
@@ -298,13 +298,13 @@ main {
       width: 12px;
       height: 2px;
     }
-    
+
     & span:nth-child(1) {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
-    
+
     & span:nth-child(2) {
       top: 50%;
       left: 50%;
@@ -315,82 +315,65 @@ main {
 
 //-----------------------------------------------------
 
-.tab_area {
-  //nav_areaの重なりを上にして、key_visual_areaを下にする
-  position: relative;
-  z-index: 2;
-  
-  &.page_tab {
-    background-color: #fff;
-    
-    & ul {
-      display: flex;
-    }
-    
-    & li {
-      flex: 1;
-      height: 48px;
-      line-height: 48px;
-      &:nth-child(1){
-        & a{
-          border-top-left-radius: 20px 24px;
-          border-bottom-left-radius: 20px 24px;
-        }
-      }
-      &:nth-child(3){
-        & a{
-          border-top-right-radius: 20px 24px;
-          border-bottom-right-radius: 20px 24px;
-        }
-      }
-      
-      & a {
-        // display: inline-block;
-        display: block;
-        text-decoration: none;
-        color: $cBrawn;
-        background-color: #e0dacb;
-        
-        &:hover {
-          background-color: #c5b8a5;
-        }
+.link {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
-        &:active {
-          background-color: $cBrawn;
-          color: #fff;
-        }
-      }
+  & li {
+    box-sizing: border-box;
+    height: 48px;
+    line-height: 48px;
+    flex-grow: 1;
+    min-width: calc(956px / 3);
+    background-color: #e0dacb;
+    color: #88684e;
+    cursor: pointer;
+
+    &:hover {
+      background: #c5b8a5;
+    }
+
+    &:nth-child(1) {
+      border-top-left-radius: 20px 24px;
+      border-bottom-left-radius: 20px 24px;
+    }
+
+    &:nth-child(3) {
+      border-top-right-radius: 20px 24px;
+      border-bottom-right-radius: 20px 24px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-left: 2px;
+    }
+
+    &.active {
+      background-color: #88684e;
+      color: #fff;
     }
   }
+}
 
-  & nav {
-    text-align: center;
+.cat_area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    & ul {
-      width: 960px;
+  & .cat_content {
+    width: 304px;
+    min-height: 256px;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    & p:last-of-type {
       margin: 0;
-      padding: 0;
-      list-style: none;
+    }
 
-      //   インラインブロックにしたときに発生する謎の余白対策
-      font-size: 0;
-      line-height: 0;
-
-      & li {
-        display: inline-block;
-
-        // インラインブロックにしたときに発生する謎の余白対策
-        font-size: $PfontSize;
-        line-height: $PlineHeight;
-
-        & a {
-          color: $cBlack;
-        }
-      }
-
-      & li + li{
-        margin-left: 2px;
-      }
+    &:hover {
+      opacity: 0.8;
     }
   }
 }

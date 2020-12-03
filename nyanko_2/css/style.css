@@ -305,79 +305,75 @@ main .sec_detail p {
           transform: translate(-50%, -50%) rotate(90deg);
 }
 
-.tab_area {
-  position: relative;
-  z-index: 2;
-}
-
-.tab_area.page_tab {
-  background-color: #fff;
-}
-
-.tab_area.page_tab ul {
+.link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-.tab_area.page_tab li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.link li {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 48px;
   line-height: 48px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: calc(956px / 3);
+  background-color: #e0dacb;
+  color: #88684e;
+  cursor: pointer;
 }
 
-.tab_area.page_tab li:nth-child(1) a {
+.link li:hover {
+  background: #c5b8a5;
+}
+
+.link li:nth-child(1) {
   border-top-left-radius: 20px 24px;
   border-bottom-left-radius: 20px 24px;
 }
 
-.tab_area.page_tab li:nth-child(3) a {
+.link li:nth-child(3) {
   border-top-right-radius: 20px 24px;
   border-bottom-right-radius: 20px 24px;
 }
 
-.tab_area.page_tab li a {
-  display: block;
-  text-decoration: none;
-  color: #88684e;
-  background-color: #e0dacb;
+.link li:nth-child(2), .link li:nth-child(3) {
+  margin-left: 2px;
 }
 
-.tab_area.page_tab li a:hover {
-  background-color: #c5b8a5;
-}
-
-.tab_area.page_tab li a:active {
+.link li.active {
   background-color: #88684e;
   color: #fff;
 }
 
-.tab_area nav {
-  text-align: center;
+.cat_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.tab_area nav ul {
-  width: 960px;
+.cat_area .cat_content {
+  width: 304px;
+  min-height: 256px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.cat_area .cat_content p:last-of-type {
   margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 0;
-  line-height: 0;
 }
 
-.tab_area nav ul li {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.tab_area nav ul li a {
-  color: #333;
-}
-
-.tab_area nav ul li + li {
-  margin-left: 2px;
+.cat_area .cat_content:hover {
+  opacity: 0.8;
 }
 /*# sourceMappingURL=style.css.map */
