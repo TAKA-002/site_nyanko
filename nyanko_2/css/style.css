@@ -1,0 +1,383 @@
+@charset "UTF-8";
+body {
+  font-family: "ヒラギノ角ゴシック";
+  font-size: 16px;
+}
+
+header {
+  position: relative;
+  z-index: auto;
+}
+
+.inner {
+  width: 960px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+
+.nav_area {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav_area.NHK_nav {
+  position: fixed;
+  z-index: 5;
+  background-color: #f0f0f0;
+}
+
+.nav_area.NHK_nav ul li {
+  height: 36px;
+  line-height: 36px;
+}
+
+.nav_area.NHK_nav ul li a {
+  display: inline-block;
+  display: block;
+  text-decoration: none;
+  padding: 0 33px;
+}
+
+.nav_area.NHK_nav ul li a:hover {
+  background-color: #0087d2;
+  color: #fff;
+}
+
+.nav_area.page_nav {
+  background-color: #e0dacb;
+}
+
+.nav_area.page_nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav_area.page_nav li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 60px;
+  line-height: 60px;
+}
+
+.nav_area.page_nav li a {
+  display: block;
+  text-decoration: none;
+  color: #88684e;
+}
+
+.nav_area.page_nav li a:hover {
+  background-color: #c5b8a5;
+}
+
+.nav_area.page_nav li a:active {
+  background-color: #88684e;
+  color: #fff;
+}
+
+.nav_area nav {
+  text-align: center;
+}
+
+.nav_area nav ul {
+  width: 960px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  line-height: 0;
+}
+
+.nav_area nav ul li {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.nav_area nav ul li a {
+  color: #333;
+}
+
+.key_visual_area {
+  position: relative;
+  z-index: 1;
+  height: 360px;
+  padding-top: 36px;
+  background: url(../images/MV-bg.png) repeat center;
+}
+
+.key_visual_area .key_visual_content {
+  width: 590px;
+  position: absolute;
+  z-index: 1;
+  top: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+
+.key_visual_area .key_visual_content .logo {
+  position: relative;
+  z-index: 2;
+}
+
+.key_visual_area .key_visual_content p {
+  margin: 30px 0 0 0;
+  line-height: 1.5;
+  color: #5e412f;
+  position: relative;
+  z-index: 2;
+}
+
+.key_visual_area .key_visual_content .key_visual {
+  position: absolute;
+  z-index: 1;
+  top: -50%;
+  left: -50%;
+  -webkit-transform: translate(-10%, -3.5%);
+          transform: translate(-10%, -3.5%);
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-img {
+  background-image: url(../images/asiato.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bgc-b {
+  background-color: #f8f3ec;
+}
+
+.bgc_g {
+  background-color: #57b5a0;
+}
+
+.bgc_o {
+  background-color: #f07818;
+}
+
+.bgc-w {
+  background-color: #fff;
+}
+
+.sec_layout {
+  padding: 48px 0 66px 0;
+  text-align: center;
+}
+
+.time_stanp {
+  color: #b6b6b6;
+}
+
+main .header2 {
+  font-family: "Futura Medium";
+  font-size: 32px;
+  line-height: 1.4;
+  letter-spacing: 13px;
+  color: #88684e;
+  margin: 0 0 28px 0;
+}
+
+main .sec_image {
+  width: 640px;
+  height: 360px;
+  vertical-align: bottom;
+}
+
+main .sec_detail {
+  margin-top: 32px;
+  padding: 0 120px;
+}
+
+main .sec_detail .header3 {
+  font-size: 24px;
+  font-weight: normal;
+  text-align: left;
+  margin: 0;
+}
+
+main .sec_detail p {
+  text-align: left;
+  margin: 15px 0 0 0;
+  line-height: 1.6;
+}
+
+.sec_layout .member_info_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sec_layout .member_info_area .member_info_layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 32px;
+  width: 468px;
+  height: 246px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sec_layout .member_info_area .member_info_layout img {
+  width: 180px;
+  height: 180px;
+  vertical-align: bottom;
+}
+
+.sec_layout .member_info_area .member_info_layout .keeper_info {
+  width: 208px;
+}
+
+.sec_layout .member_info_area .member_info_layout .keeper_info .header3 {
+  font-size: 24px;
+  font-weight: normal;
+  text-align: left;
+  margin: 17px 0 0 0;
+  letter-spacing: 1px;
+}
+
+.sec_layout .member_info_area .member_info_layout .keeper_info .header3 span {
+  font-size: 18px;
+}
+
+.sec_layout .member_info_area .member_info_layout .keeper_info p {
+  margin: 20px 0 28px 0;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.btn {
+  width: 208px;
+  height: 33px;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn .icon {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+}
+
+.btn .icon span {
+  position: absolute;
+  background-color: #fff;
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+}
+
+.btn .icon span:nth-child(1) {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.btn .icon span:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.tab_area {
+  position: relative;
+  z-index: 2;
+}
+
+.tab_area.page_tab {
+  background-color: #fff;
+}
+
+.tab_area.page_tab ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tab_area.page_tab li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 48px;
+  line-height: 48px;
+}
+
+.tab_area.page_tab li:nth-child(1) a {
+  border-top-left-radius: 20px 24px;
+  border-bottom-left-radius: 20px 24px;
+}
+
+.tab_area.page_tab li:nth-child(3) a {
+  border-top-right-radius: 20px 24px;
+  border-bottom-right-radius: 20px 24px;
+}
+
+.tab_area.page_tab li a {
+  display: block;
+  text-decoration: none;
+  color: #88684e;
+  background-color: #e0dacb;
+}
+
+.tab_area.page_tab li a:hover {
+  background-color: #c5b8a5;
+}
+
+.tab_area.page_tab li a:active {
+  background-color: #88684e;
+  color: #fff;
+}
+
+.tab_area nav {
+  text-align: center;
+}
+
+.tab_area nav ul {
+  width: 960px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  line-height: 0;
+}
+
+.tab_area nav ul li {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.tab_area nav ul li a {
+  color: #333;
+}
+
+.tab_area nav ul li + li {
+  margin-left: 2px;
+}
+/*# sourceMappingURL=style.css.map */

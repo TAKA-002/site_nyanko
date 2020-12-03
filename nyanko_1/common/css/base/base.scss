@@ -1,0 +1,19 @@
+$maxWidth: 960px;
+
+$cWhite: #fff;
+$cBlack: #454545;
+$cBlue: #0087d2;
+
+$cText: $cBlack;
+$cHeaderNav: $cBlue;
+
+body {
+  overflow: hidden;
+  font-family: "ヒラギノ角ゴシック";
+}
+
+.container {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  // padding: 0 40px;
+}
