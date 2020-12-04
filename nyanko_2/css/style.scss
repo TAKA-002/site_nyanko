@@ -30,8 +30,8 @@ header {
   z-index: 1;
 
   &.NHK_nav {
-    position: fixed;
-    z-index: 5;
+    position: relative;
+    z-index: 1;
     background-color: #f0f0f0;
 
     & ul li {
@@ -118,7 +118,6 @@ header {
   z-index: 1;
 
   height: 360px;
-  padding-top: 36px;
   background: url(../images/MV-bg.png) repeat center;
 
   & .key_visual_content {
@@ -153,6 +152,10 @@ header {
       transform: translate(-10%, -3.5%);
     }
   }
+}
+
+.nyanko_anime {
+  opacity: 0;
 }
 
 //-----------------------------------------------------
@@ -361,6 +364,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0 0 125px;
 
   & .cat_content {
     width: 304px;
