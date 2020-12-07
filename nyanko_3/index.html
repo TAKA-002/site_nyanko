@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        //外部ファイル出力
+        $(function () {
+            // NHKナビ
+            $('.NHK_nav').load('module/NHK_nav.html');
+
+            // ねこ記事群
+            $('#articles_area').load('module/articles.html');
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header id="header">
+        <!-- NHKナビ（jquryで出力） -->
+        <div class="nav_area NHK_nav"></div>
+
+        <!-- キービジュアル -->
+        <div class="key_visual_area">
+            <div class="inner">
+                <div class="key_visual_content">
+                    <img class="logo" src="./images/logo.svg" alt="" />
+                    <p>
+                        ネコ（猫）は、狭義には食肉目ネコ科ネコ属に分類されるヨーロッパヤマネコが家畜化されたイエネコ（家猫）に対する
+                        通称である。
+                    </p>
+                    <img id="nyanko" class="key_visual" src="./images/nyanko.png" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- にゃんこページナビ -->
+        <div class="nav_area page_nav">
+            <div class="inner">
+                <nav>
+                    <ul>
+                        <li><a href="#">トップ</a></li>
+                        <li><a href="#">育て方</a></li>
+                        <li><a href="#">応募フォーム</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインセクション　Pick up -->
+    <main>
+        <div class="bgc-w">
+            <div class="inner sec_layout bg-img">
+                <h2 class="header2">Pick up</h2>
+                <img class="sec_image" src="./images/img-01.jpg" alt="" />
+                <div class="sec_detail">
+                    <h3 class="header3">野十郎さんのお食事事情。</h3>
+                    <p class="time_stanp">2014年5月21日</p>
+                    <p>
+                        野十郎さんのゴハンは、朝にはカリカリにお肉（赤身やササミ）を混ぜたもの。昼は自分でお皿にあるものを好きな時間に。夕方１８時にオヤツ（シーバなど）夜にはまたカリカリにしたお肉。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- メインセクション　飼育員さん -->
+        <div class="bgc-b">
+            <div class="inner sec_layout">
+                <h2 class="header2">飼育員さん</h2>
+                <div class="member_info_area">
+                    <div class="bgc-w member_info_layout">
+                        <img src="./images/gotosan.png" alt="" />
+                        <div class="keeper_info">
+                            <h3 class="header3">ごとう<span>さん</span></h3>
+                            <p>
+                                好きな猫種はアメリカンショートヘア。マンチカンも捨てがたい。
+                            </p>
+                            <button class="btn bgc_o">
+                                プロフィールを見る
+                                <div class="icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bgc-w member_info_layout">
+                        <img src="./images/fujisawasan.png" alt="" />
+                        <div class="keeper_info">
+                            <h3 class="header3">ふじさわ<span>さん</span></h3>
+                            <p>
+                                好きな猫種はエキゾチックショートヘア。野十郎がお気に入り。
+                            </p>
+                            <button class="btn bgc_g">
+                                プロフィールを見る
+                                <div class="icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- articles セクション ねこ記事群（jqueryで出力） -->
+        <section id="articles_area"></section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <!-- NHKナビ（jquryで出力） -->
+        <div class="nav_area NHK_nav"></div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

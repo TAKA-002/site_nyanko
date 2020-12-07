@@ -1,0 +1,46 @@
+//キービジュアル
+.key_visual_area {
+  //nav_areaの重なりを上にして、key_visual_areaを下にする
+  position: relative;
+  z-index: 1;
+
+  height: 360px;
+  background: url(../images/MV-bg.png) repeat center;
+
+  & .key_visual_content {
+    width: 590px;
+
+    //.innerを基準にtopは固定値(innerにはrelativeあり)
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    & .logo {
+      position: relative;
+      z-index: 2;
+    }
+
+    & p {
+      margin: 30px 0 0 0;
+      line-height: 1.5;
+      color: #5e412f;
+      position: relative;
+      z-index: 2;
+    }
+
+    & .key_visual {
+      position: absolute;
+      z-index: 1;
+      top: -50%;
+      left: -50%;
+      transform: translate(-10%, -3.5%);
+    }
+  }
+}
+
+.nyanko_anime {
+  opacity: 0;
+}

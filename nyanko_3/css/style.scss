@@ -1,0 +1,115 @@
+@import "./parts/NHKnav";
+@import "./parts/keyVisual";
+@import "./parts/pickupSec";
+@import "./parts/articles";
+@import "./parts/btn";
+
+$PfontSize: 16px;
+$PlineHeight: 1.6;
+$cBlack: #333;
+$cBrawn: #88684e;
+$cGray: #b6b6b6;
+$cWhite: #fff;
+
+body {
+  font-family: "ヒラギノ角ゴシック";
+  font-size: $PfontSize;
+}
+
+header {
+  position: relative;
+  z-index: auto;
+}
+
+.inner {
+  width: 960px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+
+
+
+//-----------------------------------------------------
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-img {
+  background-image: url(../images/asiato.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bgc-b {
+  background-color: #f8f3ec;
+}
+
+.bgc_g {
+  background-color: #57b5a0;
+}
+
+.bgc_o {
+  background-color: #f07818;
+}
+
+.bgc-w {
+  background-color: #fff;
+}
+
+.sec_layout {
+  padding: 48px 0 66px 0;
+  text-align: center;
+}
+
+.time_stanp {
+  color: $cGray;
+}
+
+.sec_layout {
+  & .member_info_area {
+    display: flex;
+    justify-content: space-between;
+
+    & .member_info_layout {
+      display: flex;
+      justify-content: space-between;
+      padding: 32px;
+      width: 468px;
+      height: 246px;
+      box-sizing: border-box;
+
+      & img {
+        width: 180px;
+        height: 180px;
+        vertical-align: bottom;
+      }
+
+      & .keeper_info {
+        width: 208px;
+
+        & .header3 {
+          font-size: $PfontSize * 1.5;
+          font-weight: normal;
+          text-align: left;
+          margin: 17px 0 0 0;
+          letter-spacing: 1px;
+
+          & span {
+            font-size: 18px;
+          }
+        }
+
+        & p {
+          margin: 20px 0 28px 0;
+          letter-spacing: 1px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+

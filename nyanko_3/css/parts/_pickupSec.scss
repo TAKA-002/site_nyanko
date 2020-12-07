@@ -1,0 +1,34 @@
+main {
+  & .header2 {
+    font-family: "Futura Medium";
+    font-size: $PfontSize * 2;
+    line-height: 1.4;
+    letter-spacing: 13px;
+    color: $cBrawn;
+    margin: 0 0 28px 0;
+  }
+
+  & .sec_image {
+    width: 640px;
+    height: 360px;
+    vertical-align: bottom;
+  }
+
+  & .sec_detail {
+    margin-top: 32px;
+    padding: 0 120px;
+
+    & .header3 {
+      font-size: $PfontSize * 1.5;
+      font-weight: normal;
+      text-align: left;
+      margin: 0;
+    }
+
+    & p {
+      text-align: left;
+      margin: 15px 0 0 0;
+      line-height: 1.6;
+    }
+  }
+}

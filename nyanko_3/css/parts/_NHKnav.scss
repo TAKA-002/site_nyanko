@@ -1,0 +1,88 @@
+//各種ナビ
+.nav_area {
+  //nav_areaの重なりを上にして、key_visual_areaを下にする
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  &.NHK_nav {
+    position: relative;
+    z-index: 1;
+    background-color: #f0f0f0;
+
+    & ul li {
+      height: 36px;
+      line-height: 36px;
+
+      & a {
+        display: inline-block;
+        display: block;
+        text-decoration: none;
+        padding: 0 33px;
+
+        &:hover {
+          background-color: #0087d2;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &.page_nav {
+    background-color: #e0dacb;
+
+    & ul {
+      display: flex;
+    }
+
+    & li {
+      flex: 1;
+      height: 60px;
+      line-height: 60px;
+
+      & a {
+        // display: inline-block;
+        display: block;
+        text-decoration: none;
+        color: $cBrawn;
+
+        &:hover {
+          background-color: #c5b8a5;
+        }
+
+        &:active {
+          background-color: $cBrawn;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  //ナビ共通
+  & nav {
+    text-align: center;
+
+    & ul {
+      width: 960px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      //   インラインブロックにしたときに発生する謎の余白対策
+      font-size: 0;
+      line-height: 0;
+
+      & li {
+        display: inline-block;
+
+        // インラインブロックにしたときに発生する謎の余白対策
+        font-size: $PfontSize;
+        line-height: $PlineHeight;
+
+        & a {
+          color: $cBlack;
+        }
+      }
+    }
+  }
+}
