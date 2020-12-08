@@ -39,15 +39,15 @@
   }
 }
 
-.rotate{
-  animation:iconRotation 3s ease 0.5s;
+.rotate {
+  animation: iconRotation 3s ease 0.5s;
 }
 
-@keyframes iconRotation{
-0%{
-  transform: rotate(0);
-}
-100%{
-  transform: rotate(540deg);
-}
+@keyframes iconRotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
 }
