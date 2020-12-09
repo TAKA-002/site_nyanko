@@ -1,15 +1,35 @@
-@import "./parts/NHKnav";
-@import "./parts/keyVisual";
-@import "./parts/pickupSec";
-@import "./parts/articles";
-@import "./parts/btn";
-
 $PfontSize: 16px;
 $PlineHeight: 1.6;
 $cBlack: #333;
 $cBrawn: #88684e;
 $cGray: #b6b6b6;
 $cWhite: #fff;
+
+@import "./parts/NHKnav";
+@import "./parts/keyVisual";
+@import "./parts/pickupSec";
+@import "./parts/articles";
+@import "./parts/btn";
+
+@mixin animation(
+  $name,
+  $duration: 5s,
+  $timing-function: ease,
+  $delay: 0s,
+  $iteration-count: infinite,
+  $direction: normal,
+  $fill-mode: forwards
+) {
+  animation: {
+    name: $name;
+    duration: $duration;
+    timing-function: $timing-function;
+    delay: $delay;
+    iteration-count: $iteration-count;
+    direction: $direction;
+    fill-mode: $fill-mode;
+  }
+}
 
 body {
   font-family: "ヒラギノ角ゴシック";
@@ -83,6 +103,12 @@ main {
         width: 180px;
         height: 180px;
         vertical-align: bottom;
+
+        @include animation(
+          $name: rotateImg,
+          $timing-function: ease-in-out,
+          $direction: alternate
+        );
       }
 
       & .keeper_info {
@@ -107,5 +133,17 @@ main {
         }
       }
     }
+  }
+}
+
+@keyframes rotateImg {
+  0% {
+    transform: perspective(500px) rotateX(0) rotateY(90deg);
+  }
+  50% {
+    transform: perspective(500px) rotateX(180deg) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(500px) rotateX(360deg) rotateY(540deg);
   }
 }

@@ -1,21 +1,4 @@
 @charset "UTF-8";
-body {
-  font-family: "ヒラギノ角ゴシック";
-  font-size: 16px;
-}
-
-header {
-  position: relative;
-  z-index: auto;
-}
-
-.inner {
-  width: 960px;
-  margin: 0 auto;
-  height: 100%;
-  position: relative;
-}
-
 .nav_area {
   position: relative;
   width: 100%;
@@ -102,6 +85,7 @@ header {
 }
 
 .key_visual_area {
+  overflow: hidden;
   position: relative;
   z-index: 1;
   height: 360px;
@@ -145,42 +129,6 @@ header {
   opacity: 0;
 }
 
-main {
-  position: relative;
-  z-index: 2;
-}
-
-.bg-img {
-  background-image: url(../images/asiato.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.bgc-b {
-  background-color: #f8f3ec;
-}
-
-.bgc_g {
-  background-color: #57b5a0;
-}
-
-.bgc_o {
-  background-color: #f07818;
-}
-
-.bgc-w {
-  background-color: #fff;
-}
-
-.sec_layout {
-  padding: 48px 0 66px 0;
-  text-align: center;
-}
-
-.time_stanp {
-  color: #b6b6b6;
-}
-
 main .header2 {
   font-family: "Futura Medium";
   font-size: 32px;
@@ -212,100 +160,6 @@ main .sec_detail p {
   text-align: left;
   margin: 15px 0 0 0;
   line-height: 1.6;
-}
-
-.sec_layout .member_info_area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.sec_layout .member_info_area .member_info_layout {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 32px;
-  width: 468px;
-  height: 246px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.sec_layout .member_info_area .member_info_layout img {
-  width: 180px;
-  height: 180px;
-  vertical-align: bottom;
-}
-
-.sec_layout .member_info_area .member_info_layout .keeper_info {
-  width: 208px;
-}
-
-.sec_layout .member_info_area .member_info_layout .keeper_info .header3 {
-  font-size: 24px;
-  font-weight: normal;
-  text-align: left;
-  margin: 17px 0 0 0;
-  letter-spacing: 1px;
-}
-
-.sec_layout .member_info_area .member_info_layout .keeper_info .header3 span {
-  font-size: 18px;
-}
-
-.sec_layout .member_info_area .member_info_layout .keeper_info p {
-  margin: 20px 0 28px 0;
-  letter-spacing: 1px;
-  text-align: left;
-}
-
-.btn {
-  width: 208px;
-  height: 33px;
-  border-radius: 15px;
-  border: none;
-  color: #fff;
-  padding: 0;
-  cursor: pointer;
-}
-
-.btn:hover {
-  opacity: 0.8;
-}
-
-.btn .icon {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 12px;
-}
-
-.btn .icon span {
-  position: absolute;
-  background-color: #fff;
-  display: inline-block;
-  width: 12px;
-  height: 2px;
-}
-
-.btn .icon span:nth-child(1) {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.btn .icon span:nth-child(2) {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(90deg);
-          transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .link {
@@ -379,5 +233,223 @@ main .sec_detail p {
 
 .cat_area .cat_content:hover {
   opacity: 0.8;
+}
+
+.btn {
+  width: 208px;
+  height: 33px;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn .icon {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+}
+
+.btn .icon span {
+  position: absolute;
+  background-color: #fff;
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+}
+
+.btn .icon span:nth-child(1) {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.btn .icon span:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.rotate {
+  -webkit-animation: iconRotation 3s ease 0.5s;
+          animation: iconRotation 3s ease 0.5s;
+}
+
+@-webkit-keyframes iconRotation {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(540deg);
+            transform: rotate(540deg);
+  }
+}
+
+@keyframes iconRotation {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(540deg);
+            transform: rotate(540deg);
+  }
+}
+
+body {
+  font-family: "ヒラギノ角ゴシック";
+  font-size: 16px;
+}
+
+header {
+  position: relative;
+  z-index: auto;
+}
+
+.inner {
+  width: 960px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-img {
+  background-image: url(../images/asiato.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bgc-b {
+  background-color: #f8f3ec;
+}
+
+.bgc_g {
+  background-color: #57b5a0;
+}
+
+.bgc_o {
+  background-color: #f07818;
+}
+
+.bgc-w {
+  background-color: #fff;
+}
+
+.sec_layout {
+  padding: 48px 0 66px 0;
+  text-align: center;
+}
+
+.time_stanp {
+  color: #b6b6b6;
+}
+
+.sec_layout .member_info_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sec_layout .member_info_area .member_info_layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 32px;
+  width: 468px;
+  height: 246px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sec_layout .member_info_area .member_info_layout img {
+  width: 180px;
+  height: 180px;
+  vertical-align: bottom;
+  -webkit-animation-name: rotateImg;
+          animation-name: rotateImg;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.sec_layout .member_info_area .member_info_layout .keeper_info {
+  width: 208px;
+}
+
+.sec_layout .member_info_area .member_info_layout .keeper_info .header3 {
+  font-size: 24px;
+  font-weight: normal;
+  text-align: left;
+  margin: 17px 0 0 0;
+  letter-spacing: 1px;
+}
+
+.sec_layout .member_info_area .member_info_layout .keeper_info .header3 span {
+  font-size: 18px;
+}
+
+.sec_layout .member_info_area .member_info_layout .keeper_info p {
+  margin: 20px 0 28px 0;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+@-webkit-keyframes rotateImg {
+  0% {
+    -webkit-transform: perspective(500px) rotateX(0) rotateY(90deg);
+            transform: perspective(500px) rotateX(0) rotateY(90deg);
+  }
+  50% {
+    -webkit-transform: perspective(500px) rotateX(180deg) rotateY(180deg);
+            transform: perspective(500px) rotateX(180deg) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: perspective(500px) rotateX(360deg) rotateY(540deg);
+            transform: perspective(500px) rotateX(360deg) rotateY(540deg);
+  }
+}
+
+@keyframes rotateImg {
+  0% {
+    -webkit-transform: perspective(500px) rotateX(0) rotateY(90deg);
+            transform: perspective(500px) rotateX(0) rotateY(90deg);
+  }
+  50% {
+    -webkit-transform: perspective(500px) rotateX(180deg) rotateY(180deg);
+            transform: perspective(500px) rotateX(180deg) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: perspective(500px) rotateX(360deg) rotateY(540deg);
+            transform: perspective(500px) rotateX(360deg) rotateY(540deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */

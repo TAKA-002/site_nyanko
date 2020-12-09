@@ -1,6 +1,7 @@
 //キービジュアル
 .key_visual_area {
   //nav_areaの重なりを上にして、key_visual_areaを下にする
+  overflow: hidden;
   position: relative;
   z-index: 1;
 
