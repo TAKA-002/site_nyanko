@@ -38,10 +38,72 @@
       top: -50%;
       left: -50%;
       transform: translate(-10%, -3.5%);
+
+      animation-name: purupuruCat;
+      animation-duration: 4s;
+      animation-timing-function: ease-in;
+      animation-delay: 5s;
+      animation-iteration-count: infinite;
     }
   }
 }
 
-.nyanko_anime {
-  opacity: 0;
+@keyframes purupuruCat {
+  0% {
+    transform: translate(-10%, -3, 5%);
+  }
+  6% {
+    transform: translateX(-11%);
+  }
+  9% {
+    transform: translateX(-9%);
+  }
+  12% {
+    transform: translateX(-10%);
+  }
+  15% {
+    transform: translateX(-11%);
+  }
+  18% {
+    transform: translateX(-9%);
+  }
+  21% {
+    transform: translateX(-10%);
+  }
+  24% {
+    transform: translateX(-11%);
+  }
+  27% {
+    transform: translateX(-9%);
+  }
+  30% {
+    transform: translateX(-10%);
+  }
+  33% {
+    transform: translateX(-11%);
+  }
+  36% {
+    transform: translateX(-9%);
+  }
+  39% {
+    transform: translateX(-10%);
+  }
+  42% {
+    transform: translateX(-11%);
+  }
+  45% {
+    transform: translateX(-9%);
+  }
+  48% {
+    transform: translateX(-10%);
+  }
+  80% {
+    transform: translate(-10%, 3.5%);
+  }
+  90% {
+    transform: translate(-10%, -3.5%);
+  }
+  100% {
+    transform: translate(-10%, -3.5%);
+  }
 }

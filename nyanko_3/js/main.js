@@ -1,9 +1,9 @@
 $(document).ready(function () {
   //ボタンの「＋」記号を回転
-  $(".icon").mouseover(function () {
-    $(this).addClass("rotate");
+  $(".btn").mouseover(function () {
+    $(this).children(".icon").addClass("rotate");
   });
-  $(".icon").mouseleave(function () {
-    $(this).removeClass("rotate");
+  $(".btn").mouseleave(function () {
+    $(this).children(".icon").removeClass("rotate");
   });
 });

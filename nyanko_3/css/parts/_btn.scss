@@ -1,3 +1,17 @@
+@mixin animation(
+  $name,
+  $duration: 1s,
+  $timing-function: ease-in-out,
+  $iteration-count: infinite,
+  $direction: alternate
+) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timing-function;
+  animation-iteration-count: $iteration-count;
+  animation-direction: $direction;
+}
+
 .btn {
   width: 208px;
   height: 33px;
@@ -16,6 +30,15 @@
     display: inline-block;
     width: 20px;
     height: 12px;
+
+    &.rotate {
+      @include animation(
+        $name: iconRotation,
+        $duration: 1.5s,
+        $iteration-count: infinite,
+        $direction: alternate
+      );
+    }
 
     & span {
       position: absolute;
@@ -37,10 +60,6 @@
       transform: translate(-50%, -50%) rotate(90deg);
     }
   }
-}
-
-.rotate {
-  animation: iconRotation 3s ease 0.5s;
 }
 
 @keyframes iconRotation {
